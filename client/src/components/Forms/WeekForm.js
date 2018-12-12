@@ -12,6 +12,7 @@ class WeekForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     resetForm(){
         this.setState({
             year: "",
@@ -39,7 +40,7 @@ class WeekForm extends React.Component{
                     value={this.state.year}
                     onChange={event => this.setState({ year: event.target.value })}
                     className = "week-text-input"
-                    placeholder = "2018"
+                    placeholder = { "" +new Date().getFullYear()}
                 />
 
                     <input
@@ -47,7 +48,7 @@ class WeekForm extends React.Component{
                         value={this.state.month}
                         onChange={event => this.setState({ month: event.target.value })}
                         className = "week-text-input"
-                        placeholder = "12"
+                        placeholder = { (new Date().getMonth() + 1) < 10 ? ("0" +(new Date().getMonth() + 1)) : ("" + (new Date().getMonth() + 1))}
                     />
 
                     <input
@@ -55,7 +56,7 @@ class WeekForm extends React.Component{
                         value={this.state.day}
                         onChange={event => this.setState({ day: event.target.value })}
                         className = "week-text-input"
-                        placeholder = "08"
+                        placeholder = { (new Date().getDate() < 10) ? ("0" +new Date().getDate()) : ("" + new Date().getDate())}
                     />
                 </div>
                 <div className="button-container">

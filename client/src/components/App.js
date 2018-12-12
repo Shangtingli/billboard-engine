@@ -6,8 +6,7 @@ import SongPlatForm from './PlatForms/SongPlatForm';
 import WeekPlatForm from './PlatForms/WeekPlatForm';
 import logo from '../assets/logo.svg';
 //TODO: Write PropTypes For all the Components
-//TODO: Expand the history of Billboard and figure out why the socket does not work
-//TODO: Figure out why github does not work.
+
 class App extends Component {
     constructor(props){
         super(props);
