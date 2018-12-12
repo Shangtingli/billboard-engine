@@ -1,0 +1,23 @@
+table, th, td {
+    border: 1px solid white;
+}
+
+.table{
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    top: 2vh;
+}
+
+td:hover {background-color: indianred;}
+
+.not-found-notice{
+    color: aliceblue;
+    font-size: 1.5vw;
+}
+
+.welcome-instruction{
+    color: aliceblue;
+    font-size: 1.5vw;
+}
+

@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 7vh;
+  float: left;
+
+}
+
+.App-header {
+  height: 7vh;
+  background-color: lightyellow;
+  opacity: 0.5;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-title{
+  background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+  color: antiquewhite;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 5vh;
+  font-family: arial, helvetica;
+  margin: auto;
+  top: 3vh;
+  text-align: center;
+  padding-top: 1vh;
+}
+.artists-table{
+  margin:auto;
+}
