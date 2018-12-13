@@ -1,9 +1,6 @@
 import React from 'react';
 
 class TopBar extends React.Component{
-    constructor(props){
-        super(props);
-    }
     onChangeArtists = ()=>{
         this.props.changeContext("NAME")
     }

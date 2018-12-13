@@ -1,9 +1,6 @@
 import React from 'react';
 import ArtistsTable from "../Tables/ArtistsTable"
 class ArtistsPlatForm extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return(
         <div className="platform">

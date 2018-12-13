@@ -1,9 +1,6 @@
 import React from 'react';
 import WeekTable from "../Tables/WeekTable"
 class WeekPlatForm extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return(
             <div className="platform">

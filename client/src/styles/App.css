@@ -44,3 +44,35 @@
 .artists-table{
   margin:auto;
 }
+
+.Contents{
+  min-height: 95%;
+}
+footer {
+  position: relative;
+  top: 40vh;
+
+}
+
+.social-logo{
+  width: 40px;
+  height: 40px;
+  flex:1 1 auto;
+  margin:5px;
+}
+
+#github-logo{
+  background-color: white;
+}
+
+.social-logos-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.author-info{
+  font-weight: 800;
+  font-size: 3vh;
+}
