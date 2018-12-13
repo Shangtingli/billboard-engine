@@ -103,7 +103,7 @@ app.get('/api/getNameSuggestion', function(request, response){
 
 app.get('/api/getSongSuggestion', function(request, response){
     const token = request.query.token;
-    const query = `SELECT DISTINCT song FROM history WHERE song LIKE '${token}%' ORDER BY song LIMIT 10`;
+    const query = `SELECT DISTINCT song FROM history WHERE song LIKE '%${token}%' ORDER BY song LIMIT 10`;
     console.log(query);
     const ret = [];
     con.query(query, function (error, result) {
