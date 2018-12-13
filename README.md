@@ -2,7 +2,9 @@
 
 Search billboard records according to artist name, week and song name.
 
-![readme image](./images/ScreenShot.png "Readme Image")
+![readme image](./images/ScreenShot1.png "Readme Image")
+![readme image](./images/ScreenShot2.png "Readme Image")
+![readme image](./images/ScreenShot3.png "Readme Image")
 
 ---
 ### Install
