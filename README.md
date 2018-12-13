@@ -32,7 +32,5 @@ npm start
   9 "start": "npm install && concurrently --kill-others \"npm run server\" \"npm run client\""
 ```
 ---
-### General Information
-
-#### Contributors
+### Contributor
 * [Shangting Li](https://github.com/shangtingli)
