@@ -14,13 +14,13 @@ Search billboard records according to artist name, week and song name.
 * Change mysql utilities in db/DBCreation.py
 * Run
 ```python3
-python3 db/DBCreation.py
+$ python3 db/DBCreation.py
 ```
 
 #### Start the Engine
 * Run
 ```
-npm start
+$ npm start
 ```
 
 * After your first run of npm start completes, you can see there are one **node_modules** directory created in root directory,
@@ -45,7 +45,7 @@ Something is already running on port 3000.
 *  Try the following Command, should fix the problem:
 
 ```
-killall -9 node
+$ killall -9 node
 ```
 ---
 ### Contributor
