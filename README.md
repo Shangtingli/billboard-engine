@@ -32,5 +32,21 @@ npm start
   9 "start": "npm install && concurrently --kill-others \"npm run server\" \"npm run client\""
 ```
 ---
+### Trouble Shooting
+
+* If your are getting error messages that ports are already in use such as:
+
+```
+Port 3001 is already in use
+[nodemon] app crashed - waiting for file changes before starting...
+Something is already running on port 3000.
+```
+  
+*  Try the following Command, should fix the problem:
+
+```
+killall -9 node
+```
+---
 ### Contributor
 * [Shangting Li](https://github.com/shangtingli)
