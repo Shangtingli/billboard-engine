@@ -6,7 +6,7 @@ Search billboard records according to artist name, week and song name.
 ![readme image](./images/ScreenShot2.png "Readme Image")
 ![readme image](./images/ScreenShot3.png "Readme Image")
 ---
-###Source of Data
+### Source of Data
 
 * Thanks to billboard hot 100 website: https://www.billboard.com/charts/hot-100
 * This website stores approximately one-year valid data for hot-100 ranks.
