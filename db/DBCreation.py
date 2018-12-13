@@ -8,10 +8,13 @@ from DBCreationUtil import *
 DATE = dt.now()
 NUM_OF_WEEKS = 52
 WEEKS = constructWeeks(DATE, NUM_OF_WEEKS)
-
+HOST = "localhost"
+USERNAME = "root"
+PASSWORD = "root"
+DATABASE = "artists"
 df = Construct_History(WEEKS)
 #Write into Connection
-conn = MySQLdb.connect("localhost","root","root","artists")
+conn = MySQLdb.connect(HOST,USERNAME,PASSWORD,DATABASE)
 df = pd.read_csv('Data/BillBoardHistory.csv',sep = ',',index_col = 0)
 cursor = conn.cursor()
 stm = "DROP TABLE IF EXISTS history"
