@@ -24,7 +24,7 @@ npm start
 ```
 
 * After your first run of npm start completes, you can see there are one **node_modules** directory created in root directory,
-  client directory, and server directory. For speed purposes you can comment the *"npm install"* in line 7, line 8, and line 9 in  **package.json** in root directory. The corresponding lines of code is shown below.
+  client directory, and server directory. For speed purposes you can get rid of the *"npm install"* in line 7, line 8, and line 9 in  **package.json** in root directory. The corresponding lines of code is shown below.
   
 ```
   7 "client": "cd client && npm install && npm start",
