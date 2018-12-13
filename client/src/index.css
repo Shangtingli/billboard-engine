@@ -3,7 +3,7 @@
 @import './styles/TopBar.css';
 @import './styles/WeekForm.css';
 @import './styles/Platform.css';
-
+@import './styles/DropDown.css';
 body {
   margin: 0;
   padding: 0;

@@ -150,6 +150,7 @@ class WeekTable extends Component {
     }
 
     render(){
+        debugger;
         return(
             <div>
                 <WeekForm handleGet={this.handleGet} resetTable = {this.resetTable}  ref={this.child}/>

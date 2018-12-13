@@ -39,8 +39,6 @@ class ArtistsTable extends Component {
             return response.text();
         })
             .then((response) => {
-                console.log(response);
-                debugger;
                 this.setState({data: JSON.parse(response)['result']});
             })
             .catch((e) => {throw e});

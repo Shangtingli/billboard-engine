@@ -1,0 +1,48 @@
+
+.dropdown-content {
+    background-color: rgba(24, 114, 111, .6);
+    width: 15vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin: auto;
+    min-height: 10vh;
+    display: flex;
+}
+
+.dropdown-content .suggest-list{
+    list-style: none;
+    width: 13vw;
+}
+
+.suggest-items{
+    margin-top: 1vh;
+    margin-right: 3vw;
+}
+
+.suggest-items:hover span {
+    color: red;
+    cursor: pointer;
+}
+
+.suggest-list{
+    text-align:center;
+    margin:auto;
+    min-height: 10vh;
+}
+
+/*li{*/
+    /*!*display: inline-block;*!*/
+    /*border: 2px solid black;*/
+/*}*/
+
+.suggest-items a{
+    width:100%;
+    padding:16px 0;
+    display:block;
+    position:relative;
+    color:black;
+    border-radius:4px;
+    transition:all .5s ease;
+    transform-style:preserve-3d
+}

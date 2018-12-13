@@ -66,7 +66,6 @@ app.get('/api/getSong', function(request, response){
 
 //Search the records by week
 app.get('/api/getWeek', function(request, response){
-    console.log("GetMethod");
     const week = request.query.week;
     const query = `SELECT * FROM history WHERE week = '${week}' ORDER BY rank`;
     const ret = [];
@@ -83,33 +82,40 @@ app.get('/api/getWeek', function(request, response){
         }
     });
 });
-// // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
-//
-// // app.use(logger('dev'));
-// // app.use(express.json());
-// // app.use(express.urlencoded({ extended: false }));
-// // app.use(cookieParser());
-// // app.use(express.static(path.join(__dirname, 'public')));
-// //
-// app.use('/', indexRouter);
-// // app.use('/users', usersRouter);
-//
-// // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   next(createError(404));
-// });
-//
-// // error handler
-// app.use(function(err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-//
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
 
+app.get('/api/getNameSuggestion', function(request, response){
+    const token = request.query.token;
+    const query = `SELECT DISTINCT name FROM history WHERE name LIKE '${token}%' ORDER BY name LIMIT 10`;
+    console.log(query);
+    const ret = [];
+    con.query(query, function (error, result) {
+        if (error) {
+            return response.status(400).send({error:'Error in database operation'});
+        }
+        else{
+            for (let row of result){
+                ret.push(row);
+            }
+            return response.send({result:ret});
+        }
+    });
+});
+
+app.get('/api/getSongSuggestion', function(request, response){
+    const token = request.query.token;
+    const query = `SELECT DISTINCT song FROM history WHERE song LIKE '${token}%' ORDER BY song LIMIT 10`;
+    console.log(query);
+    const ret = [];
+    con.query(query, function (error, result) {
+        if (error) {
+            return response.status(400).send({error:'Error in database operation'});
+        }
+        else{
+            for (let row of result){
+                ret.push(row);
+            }
+            return response.send({result:ret});
+        }
+    });
+});
 module.exports = app;
