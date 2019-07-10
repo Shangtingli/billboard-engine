@@ -1,121 +1,78 @@
-// var createError = require('http-errors');
-var express = require('express');
-// var path = require('path');
-// var cookieParser = require('cookie-parser');
-// var logger = require('morgan');
-//
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+//index.js
+//require the Elasticsearch librray
+const elasticsearch = require('elasticsearch');
+// instantiate an elasticsearch client
+const client = new elasticsearch.Client({
+    hosts: [ 'http://localhost:9200']
+});
+//require Express
+const express = require( 'express' );
+// instanciate an instance of express and hold the value in a constant called app
+const app     = express();
+//require the body-parser library. will be used for parsing body requests
+const bodyParser = require('body-parser')
+//require the path library
+const path    = require( 'path' );
 
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
-const con = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "root",
-    database: "artists"
+// ping the client to be sure Elasticsearch is up
+client.ping({
+    requestTimeout: 30000,
+}, function(error) {
+    // at this point, eastic search is down, please check your Elasticsearch service
+    if (error) {
+        console.error('elasticsearch cluster is down!');
+    } else {
+        console.log('Everything is ok');
+    }
 });
 
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connection Successful!");
+
+// use the bodyparser as a middleware
+app.use(bodyParser.json())
+// set port for the app to listen on
+app.set( 'port', process.env.PORT || 3003 );
+// set path to serve static files
+app.use( express.static( path.join( __dirname, 'public' )));
+// enable CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
 });
-// Search the records by artists name
-app.get('/api/getName', function(request, response){
-    console.log("GetMethod");
-    const name = request.query.name;
-    const query = `SELECT * FROM history WHERE name LIKE '%${name}%' ORDER BY week`;
-    const ret = [];
-    console.log(query);
-    con.query(query, function (error, result) {
-        if (error) {
-            return response.status(400).send({error:'Error in database operation'});
-        }
-        else{
-            for (let row of result){
-                ret.push(row);
-            }
-            return response.send({result:ret});
-        }
+
+// defined the base route and return with an HTML file called tempate.html
+app.get('/', function(req, res){
+    res.sendFile('template.html', {
+        root: path.join( __dirname, 'views' )
     });
-});
+})
 
-//Search the records by song
-app.get('/api/getSong', function(request, response){
-    console.log("GetMethod");
-    const songName = request.query.song;
-    const query = `SELECT * FROM history WHERE song = '${songName}' ORDER BY week`;
-    const ret = [];
-    console.log(query);
-    con.query(query, function (error, result) {
-        if (error) {
-            return response.status(400).send({error:'Error in database operation'});
-        }
-        else{
-            for (let row of result){
-                ret.push(row);
+// define the /search route that should return elastic search results
+app.get('/search', function (req, res){
+    // declare the query object to search elastic search and return only 200 results from the first result found.
+    // also match any data where the name is like the query string sent in
+    let body = {
+        size: 200,
+        from: 0,
+        query: {
+            match: {
+                name: req.query['q']
             }
-            return response.send({result:ret});
         }
-    });
-});
+    }
+    // perform the actual search passing in the index, the search query and the type
+    client.search({index:'scotch.io-tutorial',  body:body, type:'cities_list'})
+        .then(results => {
+            res.send(results.hits.hits);
+        })
+        .catch(err=>{
+            console.log(err)
+            res.send([]);
+        });
 
-//Search the records by week
-app.get('/api/getWeek', function(request, response){
-    const week = request.query.week;
-    const query = `SELECT * FROM history WHERE week = '${week}' ORDER BY rank`;
-    const ret = [];
-    console.log(query);
-    con.query(query, function (error, result) {
-        if (error) {
-            return response.status(400).send({error:'Error in database operation'});
-        }
-        else{
-            for (let row of result){
-                ret.push(row);
-            }
-            return response.send({result:ret});
-        }
-    });
-});
-
-app.get('/api/getNameSuggestion', function(request, response){
-    const token = request.query.token;
-    const query = `SELECT DISTINCT name FROM history WHERE name LIKE '${token}%' ORDER BY name LIMIT 10`;
-    console.log(query);
-    const ret = [];
-    con.query(query, function (error, result) {
-        if (error) {
-            return response.status(400).send({error:'Error in database operation'});
-        }
-        else{
-            for (let row of result){
-                ret.push(row);
-            }
-            return response.send({result:ret});
-        }
-    });
-});
-
-app.get('/api/getSongSuggestion', function(request, response){
-    const token = request.query.token;
-    const query = `SELECT DISTINCT song FROM history WHERE song LIKE '%${token}%' ORDER BY song LIMIT 10`;
-    console.log(query);
-    const ret = [];
-    con.query(query, function (error, result) {
-        if (error) {
-            return response.status(400).send({error:'Error in database operation'});
-        }
-        else{
-            for (let row of result){
-                ret.push(row);
-            }
-            return response.send({result:ret});
-        }
-    });
-});
-module.exports = app;
+})
+// listen on the specified port
+app .listen( app.get( 'port' ), function(){
+    console.log( 'Express server listening on port ' + app.get( 'port' ));
+} );
