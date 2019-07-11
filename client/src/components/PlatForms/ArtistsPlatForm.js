@@ -1,5 +1,7 @@
 import React from 'react';
 import ArtistsTable from "../Tables/ArtistsTable"
+
+
 class ArtistsPlatForm extends React.Component{
     render(){
         return(

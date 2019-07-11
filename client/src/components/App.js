@@ -3,14 +3,15 @@ import TopBar from './TopBar';
 import ArtistsPlatForm from './PlatForms/ArtistsPlatForm';
 import '../styles/App.css';
 import SongPlatForm from './PlatForms/SongPlatForm';
-import WeekPlatForm from './PlatForms/WeekPlatForm';
 import logo from '../assets/logo.svg';
 import github_logo from '../assets/github.png';
 import facebook_logo from '../assets/facebook.png';
 import linkedin_logo from '../assets/linkedin.png';
 
 //TODO: Write PropTypes For all the Components
-
+//TODO: Elastic Search Shows Intersting And Annoying Behavior when Searching
+//    1. Search of Regular Expression does not meet what we expect
+//    2. Search of Exact String Does not meet what we expect
 class App extends Component {
     constructor(props){
         super(props);
@@ -28,9 +29,6 @@ class App extends Component {
         }
         else if (this.state.platform === 'SONG'){
             return <SongPlatForm/>
-        }
-        else if (this.state.platform === 'WEEK'){
-            return <WeekPlatForm/>
         }
         else{
             return (

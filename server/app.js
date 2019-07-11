@@ -58,30 +58,74 @@ function search(body,res){
         });
 }
 
-app.get('/getArtist',function (req, res){
+app.get('/api/getArtist',function (req, res){
     let body = {
-        size: 200, from: 0, query: {match: {Artist: req.query.artist}},
+        size: 200, from: 0, query: {match_phrase: {Artist: req.query.artist}},
         sort : [{Rank : {order : "asc"}}]
     };
     search(body,res);
 })
 // define the /search route that should return elastic search results
-app.get('/getSong', function (req, res){
+app.get('/api/getSong', function (req, res){
     let body = {
-        size: 200, from: 0, query: {match: {Song: req.query.song}},
+        size: 200, from: 0, query: {match_phrase: {Song: req.query.song}},
         sort : [{Rank : {order : "asc"}}]
     };
     search(body,res);
 
 });
 
-app.get('/getYear',function(req,res){
+app.get('/api/getYear',function(req,res){
     let body = {
-        size: 200, from: 0, query: {match: {Year: req.query.year}},
+        size: 200, from: 0, query: {match_phrase: {Year: req.query.year}},
         sort : [{Rank : {order : "asc"}}]
     };
     search(body,res);
 });
+
+// TODO:Support Case Insensitivity, investigate why regular expression does not work perfectly
+app.get('/api/getNameSuggestions',function(req,res){
+    let regex = "^".concat(req.query.token,'*');
+    let body = {
+        size: 0,
+        query:{
+            regexp:{
+                Artist : {
+                    value: regex
+                }
+            }
+        },
+        aggs : {
+            patterns : {
+                terms : {field : "Artist.keyword" ,size:100}
+            }
+        }
+    };
+
+    search(body,res)
+})
+
+app.get('/api/getSongSuggestions',function(req,res){
+    let regex = "^".concat(req.query.token,'*');
+    let body = {
+        size: 0,
+        query:{
+            regexp:{
+                Artist : {
+                    value: regex
+                }
+            }
+        },
+        aggs : {
+            patterns : {
+                terms : {field : "Song.keyword" ,size:100}
+            }
+        }
+    };
+
+    console.log(regex);
+    search(body,res)
+})
 // listen on the specified port
 app .listen( app.get( 'port' ), function(){
     console.log( 'Express server listening on port ' + app.get( 'port' ));

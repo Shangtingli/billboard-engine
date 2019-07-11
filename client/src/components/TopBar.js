@@ -5,10 +5,6 @@ class TopBar extends React.Component{
         this.props.changeContext("NAME")
     }
 
-    onChangeWeek = ()=>{
-        this.props.changeContext("WEEK")
-    }
-
     onChangeSong = ()=>{
         this.props.changeContext("SONG")
     }
@@ -21,11 +17,6 @@ class TopBar extends React.Component{
               <button onClick = {this.onChangeArtists}>
                 Artists
             </button>
-
-              <button onClick = {this.onChangeWeek}>
-                Week
-            </button>
-
               <button onClick = {this.onChangeSong}>
                 Song
             </button>

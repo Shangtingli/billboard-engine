@@ -1,3 +1,5 @@
+//TODO: Finished Artists Form Investigation
+
 import React,{Component} from 'react';
 class Form extends Component{
     constructor(props){
@@ -44,17 +46,17 @@ class Form extends Component{
             return;
         }
         const token = event.target.value;
-        const endpoint = `/api/getNameSuggestion?token=${token}`;
+        const endpoint = `/api/getNameSuggestions?token=${token}`;
         fetch(endpoint, {
             method: 'GET'
         }).then((response) => {
             return response.text();
         })
             .then((response) => {
-                console.log(response);
+                debugger;
                 this.setState({
                     artist: token,
-                    suggestions: JSON.parse(response)['result'].map((result) => {return result['name'];})
+                    suggestions: JSON.parse(response).map((result) => {return result['name'];})
 
                 })})
                     .catch((e) => {

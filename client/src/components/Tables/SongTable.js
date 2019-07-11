@@ -11,17 +11,18 @@ class SongTable extends Component {
     }
 
     build(row) {
-        const name = row['name'];
-        const week = row['week'];
-        const rank = row['rank'];
-        const song = row['song'];
-        const id = row['id'];
+        const info = row['_source'];
+        const name = info['Artist'];
+        const year = info['Year'];
+        const rank = info['Rank'];
+        const song = info['Song'];
+        const id = row['_id'];
         return (
             <tr key={id}>
                 <td className="artists-name"> {name}</td>
                 <td className="artists-rank"> {rank}</td>
                 <td className="artists-song"> {song}</td>
-                <td className="artists-awarded-week"> {week}</td>
+                <td className="artists-awarded-week"> {year}</td>
             </tr>
         );
     }
@@ -39,8 +40,8 @@ class SongTable extends Component {
             return response.text();
         })
             .then((response) => {
-                console.log(response);
-                this.setState({data: JSON.parse(response)['result']});
+                debugger;
+                this.setState({data: JSON.parse(response)});
             })
             .catch((e) => {throw e});
     }
@@ -54,13 +55,12 @@ class SongTable extends Component {
     showDescription() {
         if (this.state.data === "") {
             return (<p className="welcome-instruction"> Welcome! Please enter a favorite song you like. <br/>
-                We will show its relevant records on billboard.
+                We will show you his or her records on billboard.
             </p>);
         }
         else if (this.state.data.length === 0)
         {
-            return (<p className = "not-found-notice"> We are sorry that your chosen song does not show on billboard <br/>
-                For the selected time period </p>);
+            return (<p className = "not-found-notice"> We are sorry that your favorite song does not show on billboard <br/></p>);
         }
         else{
             return (
@@ -76,13 +76,13 @@ class SongTable extends Component {
             this.showDescription();
         }
         else{
-            return (<table className="table">
+            return (<table className = "table">
                 <tbody>
                 <tr>
-                    <th className = "artists-name">Name</th>
-                    <th className = "artists-rank">Rank</th>
-                    <th className = "artists-song">Awarded Song</th>
-                    <th className = "artists-awarded-week">Awarded Week</th>
+                    <th className = "name">Name</th>
+                    <th className = "rank">Rank</th>
+                    <th className = "song">Awarded Song</th>
+                    <th className = "week">Awarded Year</th>
                 </tr>
                 {this.state.data.map(this.build)}
                 </tbody>

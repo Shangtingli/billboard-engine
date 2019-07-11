@@ -11,17 +11,18 @@ class ArtistsTable extends Component {
     }
 
     build(row) {
-        const name = row['name'];
-        const week = row['week'];
-        const rank = row['rank'];
-        const song = row['song'];
-        const id = row['id'];
+        const info = row['_source'];
+        const name = info['Artist'];
+        const year = info['Year'];
+        const rank = info['Rank'];
+        const song = info['Song'];
+        const id = row['_id'];
         return (
             <tr key={id}>
                 <td className="artists-name"> {name}</td>
                 <td className="artists-rank"> {rank}</td>
                 <td className="artists-song"> {song}</td>
-                <td className="artists-awarded-week"> {week}</td>
+                <td className="artists-awarded-week"> {year}</td>
             </tr>
         );
     }
@@ -32,14 +33,15 @@ class ArtistsTable extends Component {
     }
 
     _getData = (name) => {
-        const endpoint = `/api/getName?name=${name}`;
+        const endpoint = `/api/getArtist?artist=${name}`;
         fetch(endpoint, {
             method: 'GET'
         }).then((response) => {
             return response.text();
         })
             .then((response) => {
-                this.setState({data: JSON.parse(response)['result']});
+                debugger;
+                this.setState({data: JSON.parse(response)});
             })
             .catch((e) => {throw e});
     }
@@ -71,6 +73,7 @@ class ArtistsTable extends Component {
     }
 
     showElements(){
+        debugger;
         if (this.state.data === "" || this.state.data.length === 0){
             this.showDescription();
         }
@@ -81,7 +84,7 @@ class ArtistsTable extends Component {
                     <th className = "name">Name</th>
                     <th className = "rank">Rank</th>
                     <th className = "song">Awarded Song</th>
-                    <th className = "week">Awarded Week</th>
+                    <th className = "week">Awarded Year</th>
                 </tr>
                 {this.state.data.map(this.build)}
                 </tbody>
