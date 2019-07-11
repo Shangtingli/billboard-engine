@@ -41,37 +41,47 @@ app.use(function(req, res, next) {
     next();
 });
 
-// defined the base route and return with an HTML file called tempate.html
 app.get('/', function(req, res){
-    res.sendFile('template.html', {
+    res.sendFile('index.ejs', {
         root: path.join( __dirname, 'views' )
     });
 })
 
-// define the /search route that should return elastic search results
-app.get('/search', function (req, res){
-    // declare the query object to search elastic search and return only 200 results from the first result found.
-    // also match any data where the name is like the query string sent in
-    let body = {
-        size: 200,
-        from: 0,
-        query: {
-            match: {
-                name: req.query['q']
-            }
-        }
-    }
-    // perform the actual search passing in the index, the search query and the type
-    client.search({index:'scotch.io-tutorial',  body:body, type:'cities_list'})
+function search(body,res){
+    client.search({index:'billboard',  body:body})
         .then(results => {
             res.send(results.hits.hits);
         })
         .catch(err=>{
-            console.log(err)
+            console.log(err);
             res.send([]);
         });
+}
 
+app.get('/getArtist',function (req, res){
+    let body = {
+        size: 200, from: 0, query: {match: {Artist: req.query.artist}},
+        sort : [{Rank : {order : "asc"}}]
+    };
+    search(body,res);
 })
+// define the /search route that should return elastic search results
+app.get('/getSong', function (req, res){
+    let body = {
+        size: 200, from: 0, query: {match: {Song: req.query.song}},
+        sort : [{Rank : {order : "asc"}}]
+    };
+    search(body,res);
+
+});
+
+app.get('/getYear',function(req,res){
+    let body = {
+        size: 200, from: 0, query: {match: {Year: req.query.year}},
+        sort : [{Rank : {order : "asc"}}]
+    };
+    search(body,res);
+});
 // listen on the specified port
 app .listen( app.get( 'port' ), function(){
     console.log( 'Express server listening on port ' + app.get( 'port' ));
