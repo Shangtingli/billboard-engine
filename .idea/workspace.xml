@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dad1458b-e475-4bab-8811-4413e050c6c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/util/Util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/SongForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Forms/SongForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Forms/WeekForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PlatForms/WeekPlatForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tables/SongTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tables/SongTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tables/WeekTable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/WeekForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/Util.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,19 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" column="15" lean-forward="true" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+            <state relative-caret-position="157">
+              <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -50,32 +31,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/util/Util.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/BillBoard-History.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="14" column="30" selection-start-line="8" selection-start-column="17" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Tables/SongTable.js">
+        <entry file="file://$PROJECT_DIR$/client/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="34">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -83,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="170">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -93,31 +62,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/SongPlatForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-522">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -125,11 +73,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
+            <state relative-caret-position="45">
+              <caret line="96" column="125" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6">
+              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#1851#2783#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/Util/Trie.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/Util/Util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -164,17 +148,17 @@
       <find>handleGet</find>
       <find>_getData</find>
       <find>week</find>
-      <find>fetch</find>
       <find>data</find>
       <find>getSuggestions</find>
       <find>onCL</find>
       <find>debugger</find>
       <find>showElements</find>
       <find>artist</find>
-      <find>build</find>
       <find>localhost</find>
       <find>getSuggestion</find>
       <find>suggestions</find>
+      <find>build</find>
+      <find>fetch</find>
     </findStrings>
     <replaceStrings>
       <replace>table</replace>
@@ -187,11 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/DBCreation.py" />
-        <option value="$PROJECT_DIR$/client/src/components/Form.js" />
-        <option value="$PROJECT_DIR$/client/src/components/WeekSearch.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SongSearch.js" />
-        <option value="$PROJECT_DIR$/client/src/components/ArtistsSearch.js" />
         <option value="$PROJECT_DIR$/client/src/components/PlatForm.js" />
         <option value="$PROJECT_DIR$/client/src/components/Table.js" />
         <option value="$PROJECT_DIR$/client/src/components/Main.js" />
@@ -218,7 +197,6 @@
         <option value="$PROJECT_DIR$/client/src/styles/App.css" />
         <option value="$PROJECT_DIR$/client/src/components/Tables/WeekTable.js" />
         <option value="$PROJECT_DIR$/client/src/styles/TopBar.css" />
-        <option value="$PROJECT_DIR$/client/src/index.css" />
         <option value="$PROJECT_DIR$/client/src/styles/Form.css" />
         <option value="$PROJECT_DIR$/client/src/styles/DropDown.css" />
         <option value="$PROJECT_DIR$/client/src/components/ArtistsDropDown.js" />
@@ -227,17 +205,23 @@
         <option value="$PROJECT_DIR$/db/Data/BillBoard-History.csv" />
         <option value="$PROJECT_DIR$/db/data.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
-        <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
-        <option value="$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js" />
         <option value="$PROJECT_DIR$/client/src/components/Forms/SongForm.js" />
         <option value="$PROJECT_DIR$/client/src/components/Tables/SongTable.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js" />
         <option value="$PROJECT_DIR$/client/src/components/TopBar.js" />
-        <option value="$PROJECT_DIR$/client/src/components/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/client/src/util/Util.js" />
+        <option value="$PROJECT_DIR$/client/src/util/TrieNode.js" />
+        <option value="$PROJECT_DIR$/client/src/util/Trie.js" />
+        <option value="$PROJECT_DIR$/client/src/index.css" />
+        <option value="$PROJECT_DIR$/client/src/util/TrieContainer.js" />
+        <option value="$PROJECT_DIR$/client/src/Util/TrieContainer.js" />
+        <option value="$PROJECT_DIR$/client/src/Util/Trie.js" />
+        <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/client/src/components/App.js" />
+        <option value="$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js" />
+        <option value="$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js" />
+        <option value="$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js" />
       </list>
     </option>
   </component>
@@ -248,10 +232,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="250" />
-    <option name="y" value="121" />
-    <option name="width" value="1440" />
-    <option name="height" value="795" />
+    <option name="x" value="255" />
+    <option name="y" value="60" />
+    <option name="width" value="1890" />
+    <option name="height" value="960" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -259,8 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,12 +259,6 @@
               <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -290,7 +266,39 @@
               <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PlatForms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Tables" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="billboard-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="billboard-engine" type="b2602c69:ProjectViewProjectNode" />
@@ -301,6 +309,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,15 +324,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\i514767\Desktop\ProjectRelated\billboard-engine\client\src\components" />
       <recent name="$PROJECT_DIR$/client/src/styles" />
       <recent name="$PROJECT_DIR$/client/src/components/Tables" />
       <recent name="$PROJECT_DIR$/client/src/components/PlatForms" />
       <recent name="$PROJECT_DIR$/client/src/components/Forms" />
-      <recent name="$PROJECT_DIR$/client/src/components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -361,12 +374,16 @@
       <workItem from="1562757947818" duration="2266000" />
       <workItem from="1562761900357" duration="3747000" />
       <workItem from="1562806939019" duration="13015000" />
-      <workItem from="1562827781168" duration="8618000" />
+      <workItem from="1562827781168" duration="11688000" />
+      <workItem from="1562844162968" duration="1786000" />
+      <workItem from="1562893351387" duration="1694000" />
+      <workItem from="1562895341336" duration="43000" />
+      <workItem from="1562895460810" duration="6582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96113000" />
+    <option name="totallyTimeSpent" value="109288000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,7 +398,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22267206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -396,7 +413,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49959514" visible="true" weight="0.29662523" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49959514" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50040483" side_tool="true" weight="0.23090586" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -417,9 +434,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/SubmitButton.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/components/WeekSearch.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/components/SongSearch.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/Form.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/ArtistsSearch.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/PlatForm.js" />
@@ -435,24 +449,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/styles/font-awesome.css" />
-    <entry file="file://$PROJECT_DIR$/client/src/styles/WeekForm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/styles/WeekForm.css" />
     <entry file="file://$PROJECT_DIR$/client/src/styles/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
           <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -478,13 +479,6 @@
     <entry file="file://$PROJECT_DIR$/db/Data/BillBoard-History.json" />
     <entry file="file://$PROJECT_DIR$/db/preProcess.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/index.js" />
     <entry file="file://$PROJECT_DIR$/server/routes/users.js" />
@@ -512,20 +506,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/WeekPlatForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/WeekPlatForm.js" />
     <entry file="file://$PROJECT_DIR$/client/src/styles/Table.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -533,13 +514,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Forms/WeekForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Forms/WeekForm.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/Forms/SongForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -547,16 +522,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Tables/WeekTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Tables/WeekTable.js" />
     <entry file="file://$PROJECT_DIR$/client/src/components/TopBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -564,37 +530,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/SongPlatForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-522">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,23 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="86" column="55" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -632,22 +554,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="15" lean-forward="true" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/util/Util.js">
+    <entry file="file://$PROJECT_DIR$/client/src/Util/Util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-454">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Util/TrieContainer.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/Util/TrieNode.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/Util/Trie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/BillBoard-History.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="8" selection-start-column="17" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Util/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1851#2783#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/PlatForms/ArtistsPlatForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Tables/ArtistsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="96" column="125" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Util/Trie.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Forms/ArtistsForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>titan</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

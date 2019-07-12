@@ -9,7 +9,7 @@ class ArtistsPlatForm extends React.Component{
             <p className = "platform-prompt">
                 Enter a favorite artist:
             </p>
-            <ArtistsTable/>
+            <ArtistsTable trie={this.props.trie}/>
         </div>
 
         );

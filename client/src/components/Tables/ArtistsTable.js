@@ -40,7 +40,6 @@ class ArtistsTable extends Component {
             return response.text();
         })
             .then((response) => {
-                debugger;
                 this.setState({data: JSON.parse(response)});
             })
             .catch((e) => {throw e});
@@ -95,7 +94,7 @@ class ArtistsTable extends Component {
     render(){
         return(
             <div>
-                <ArtistsForm handleGet={this.handleGet} resetTable = {this.resetTable} ref={this.child}/>
+                <ArtistsForm handleGet={this.handleGet} resetTable = {this.resetTable} ref={this.child} trie={this.props.trie}/>
                 {this.showElements()}
                 {this.showDescription()}
             </div>

@@ -46,22 +46,24 @@ class Form extends Component{
             return;
         }
         const token = event.target.value;
-        const endpoint = `/api/getNameSuggestions?token=${token}`;
-        fetch(endpoint, {
-            method: 'GET'
-        }).then((response) => {
-            return response.text();
-        })
-            .then((response) => {
-                debugger;
-                this.setState({
-                    artist: token,
-                    suggestions: JSON.parse(response).map((result) => {return result['name'];})
-
-                })})
-                    .catch((e) => {
-                        throw e
-                    });
+        const list = this.props.trie.autoComplete(event.target.value).found.slice(0,5);
+        this.setState({artist:token,suggestions:list});
+        // const endpoint = `/api/getNameSuggestions?token=${token}`;
+        // fetch(endpoint, {
+        //     method: 'GET'
+        // }).then((response) => {
+        //     return response.text();
+        // })
+        //     .then((response) => {
+        //         debugger;
+        //         this.setState({
+        //             artist: token,
+        //             suggestions: JSON.parse(response).map((result) => {return result['name'];})
+        //
+        //         })})
+        //             .catch((e) => {
+        //                 throw e
+        //             });
     }
 
     onClickSuggestions(event){

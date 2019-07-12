@@ -50,6 +50,7 @@ app.get('/', function(req, res){
 function search(body,res){
     client.search({index:'billboard',  body:body})
         .then(results => {
+            console.log("Success");
             res.send(results.hits.hits);
         })
         .catch(err=>{
@@ -83,48 +84,26 @@ app.get('/api/getYear',function(req,res){
     search(body,res);
 });
 
-// TODO:Support Case Insensitivity, investigate why regular expression does not work perfectly
-app.get('/api/getNameSuggestions',function(req,res){
-    let regex = "^".concat(req.query.token,'*');
+app.get('/api/getAllArtists',function(req,res){
     let body = {
         size: 0,
-        query:{
-            regexp:{
-                Artist : {
-                    value: regex
-                }
-            }
-        },
         aggs : {
             patterns : {
-                terms : {field : "Artist.keyword" ,size:100}
+                terms : { field : "Artist.keyword",size:5000}
             }
         }
     };
 
-    search(body,res)
-})
+    client.search({index:'billboard',  body:body})
+        .then(results => {
+            console.log("Success");
+            res.send(results['aggregations']['patterns']['buckets']);
+        })
+        .catch(err=>{
+            console.log(err);
+            res.send([]);
+        });
 
-app.get('/api/getSongSuggestions',function(req,res){
-    let regex = "^".concat(req.query.token,'*');
-    let body = {
-        size: 0,
-        query:{
-            regexp:{
-                Artist : {
-                    value: regex
-                }
-            }
-        },
-        aggs : {
-            patterns : {
-                terms : {field : "Song.keyword" ,size:100}
-            }
-        }
-    };
-
-    console.log(regex);
-    search(body,res)
 })
 // listen on the specified port
 app .listen( app.get( 'port' ), function(){
