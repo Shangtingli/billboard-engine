@@ -15,7 +15,7 @@ This command starts the elasticsearch service at localhost:9200, which is the de
 2. Database source: https://www.kaggle.com/rakannimer/billboard-lyrics
 Import the data from the db folder by running 
 ```r
-npm import 
+npm run import 
 ```
 at the project root folder or
 ```r
