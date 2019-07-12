@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArtistsForm from '../Forms/ArtistsForm';
-
+import Popup from 'reactjs-popup';
 class ArtistsTable extends Component {
     constructor(props) {
         super(props);
@@ -17,14 +17,26 @@ class ArtistsTable extends Component {
         const rank = info['Rank'];
         const song = info['Song'];
         const id = row['_id'];
+        const lyrics = info['Lyrics'];
         return (
             <tr key={id}>
                 <td className="artists-name"> {name}</td>
                 <td className="artists-rank"> {rank}</td>
                 <td className="artists-song"> {song}</td>
                 <td className="artists-awarded-week"> {year}</td>
+
+                <td className="lyrics-link">
+                    <Popup trigger={<button> Show Lyrics</button>} position="left center">
+                        <div className="popup-content-container">
+                            <p style={{"color":"black"}}>
+                                   {lyrics}
+                            </p>
+                        </div>
+                    </Popup>
+                </td>
             </tr>
         );
+
     }
 
     resetTable(){
@@ -83,7 +95,8 @@ class ArtistsTable extends Component {
                     <th className = "name">Name</th>
                     <th className = "rank">Rank</th>
                     <th className = "song">Awarded Song</th>
-                    <th className = "week">Awarded Year</th>
+                    <th className = "year">Awarded Year</th>
+                    <th className = "lyrics"> Lyrics </th>
                 </tr>
                 {this.state.data.map(this.build)}
                 </tbody>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SongForm from '../Forms/SongForm';
+import Popup from "reactjs-popup";
 
 class SongTable extends Component {
     constructor(props) {
@@ -11,18 +12,30 @@ class SongTable extends Component {
     }
 
     build(row) {
+        debugger;
         const info = row['_source'];
         const name = info['Artist'];
         const year = info['Year'];
         const rank = info['Rank'];
         const song = info['Song'];
+        const lyrics = info['Lyrics'];
         const id = row['_id'];
         return (
             <tr key={id}>
                 <td className="artists-name"> {name}</td>
                 <td className="artists-rank"> {rank}</td>
                 <td className="artists-song"> {song}</td>
-                <td className="artists-awarded-week"> {year}</td>
+                <td className="artists-awarded-year"> {year}</td>
+
+                <td className="lyrics-link">
+                    <Popup trigger={<button> Show Lyrics</button>} position="left center">
+                        <div className="popup-content-container">
+                            <p style={{"color":"black"}}>
+                                {lyrics}
+                            </p>
+                        </div>
+                    </Popup>
+                </td>
             </tr>
         );
     }
@@ -82,7 +95,8 @@ class SongTable extends Component {
                     <th className = "name">Name</th>
                     <th className = "rank">Rank</th>
                     <th className = "song">Awarded Song</th>
-                    <th className = "week">Awarded Year</th>
+                    <th className = "year">Awarded Year</th>
+                    <th className = "lyrics"> Lyrics </th>
                 </tr>
                 {this.state.data.map(this.build)}
                 </tbody>

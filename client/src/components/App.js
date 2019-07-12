@@ -21,6 +21,8 @@ class App extends Component {
         this.state = {platform :'NAME', artistsTrie: null, songsTrie: null};
         this.changeContext = this.changeContext.bind(this);
         this.showLoading = this.showLoading.bind(this);
+        this.getPlatForm = this.getPlatForm.bind(this);
+        this.showError = this.showError.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +34,7 @@ class App extends Component {
         ])
             .then(([res1, res2]) => Promise.all([res1.text(), res2.text()]))
             .then(([dataArtists,dataSongs])=>{
+
                 this.setState({
                     artistsTrie: this.constructTrie(dataArtists),
                     songsTrie: this.constructTrie(dataSongs)
@@ -51,10 +54,20 @@ class App extends Component {
         this.setState({platform: platform})
     }
 
+    showError(){
+        return(
+            <div>
+                <br/> <br/>
+                <h2 style={{"color":"white"}}> No Data Present Or Connection Is Lost. <br/>
+                Check your Elastic Search Settings Or Import data using node data.js</h2>
+            </div>
+        )
+    }
     showLoading(){
         return (
             <div>
-                <p> Still Trying to Constuct Trie... </p>
+                <br/><br/>
+                <h2 style={{"color":"white"}}> Trying to connect to database... </h2>
             </div>
         )
     }
@@ -73,7 +86,9 @@ class App extends Component {
             )
         }
     }
+
   render() {
+        debugger;
     return (
       <div className="App">
           <div className = "Content">
@@ -82,7 +97,11 @@ class App extends Component {
               <p className="App-title">BILLBOARD SEARCH ENGINE</p>
           </header>
          <TopBar changeContext = {this.changeContext}/>
-          {(this.state.artistsTrie === null && this.state.songsTrie === null) ? this.showLoading():this.getPlatForm()}
+          {
+              (this.state.artistsTrie === null && this.state.songsTrie === null) ? (this.showLoading()) :
+                  ((this.state.artistsTrie.children.length === 0 && this.state.songsTrie.children.length === 0) ?
+                      (this.showError()):(this.getPlatForm()))
+          }
           </div>
           <footer>
               <div className="author-info-container">

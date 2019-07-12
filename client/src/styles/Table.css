@@ -21,3 +21,9 @@ td:hover {background-color: indianred;}
     font-size: 1.5vw;
 }
 
+.popup-content-container{
+    width: 60vw;
+    height:60vh;
+    margin-right: 10vw;
+    background-color:white;
+}

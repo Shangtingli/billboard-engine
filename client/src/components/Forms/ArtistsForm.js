@@ -24,7 +24,7 @@ class Form extends Component{
         }
     }
     buildSuggestions(){
-        const res = []
+        const res = [];
         for(let i in this.state.suggestions){
             res.push(<li className = "suggest-items" key = {''+i} onClick = {this.onClickSuggestions}> <span>{this.state.suggestions[i]}</span> </li>)
         }
