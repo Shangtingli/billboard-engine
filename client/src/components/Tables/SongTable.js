@@ -93,7 +93,8 @@ class SongTable extends Component {
     render(){
         return(
             <div>
-                <SongForm handleGet={this.handleGet} resetTable = {this.resetTable} ref={this.child}/>
+                <SongForm handleGet={this.handleGet}
+                          resetTable = {this.resetTable} ref={this.child} trie={this.props.trie}/>
                 {this.showElements()}
                 {this.showDescription()}
             </div>

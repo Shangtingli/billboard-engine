@@ -1,5 +1,3 @@
-//TODO: Finished Artists Form Investigation
-
 import React,{Component} from 'react';
 class Form extends Component{
     constructor(props){
@@ -46,24 +44,13 @@ class Form extends Component{
             return;
         }
         const token = event.target.value;
-        const list = this.props.trie.autoComplete(event.target.value).found.slice(0,5);
+        const trieResponse = this.props.trie.autoComplete(token);
+        const keys = Object.keys(trieResponse);
+        let list = [];
+        if (keys.includes("prev") && keys.includes("found")){
+            list = trieResponse.found.slice(0,5);
+        }
         this.setState({artist:token,suggestions:list});
-        // const endpoint = `/api/getNameSuggestions?token=${token}`;
-        // fetch(endpoint, {
-        //     method: 'GET'
-        // }).then((response) => {
-        //     return response.text();
-        // })
-        //     .then((response) => {
-        //         debugger;
-        //         this.setState({
-        //             artist: token,
-        //             suggestions: JSON.parse(response).map((result) => {return result['name'];})
-        //
-        //         })})
-        //             .catch((e) => {
-        //                 throw e
-        //             });
     }
 
     onClickSuggestions(event){
@@ -88,7 +75,7 @@ class Form extends Component{
                 value={this.state.artist}
                 onChange={(event) => this.getSuggestions(event)}
                 className = "text-input"
-                placeholder = "Lady Gaga"
+                placeholder = "lady gaga"
                 />
                 <div className="dropdown-content" style = {this.defineDropDownStyle()}>
                     {(this.buildSuggestionBlock())}

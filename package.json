@@ -17,10 +17,6 @@
   },
   "dependencies": {
     "concurrent": "^0.3.2",
-    "convert-csv-to-json": "0.0.15",
-    "elasticsearch": "^16.2.0",
-    "font-awesome": "^4.7.0",
-    "react": "^16.6.3",
-    "react-router-dom": "^4.4.0-beta.6"
+    "elasticsearch": "^16.2.0"
   }
 }

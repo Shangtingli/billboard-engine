@@ -7,7 +7,7 @@ class SongPlatForm extends React.Component{
                 <p className = "platform-prompt">
                     Enter a favorite song:
                 </p>
-                <SongTable/>
+                <SongTable trie={this.props.trie}/>
             </div>
 
         );

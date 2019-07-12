@@ -18,25 +18,35 @@ import linkedin_logo from '../assets/linkedin.png';
 class App extends Component {
     constructor(props){
         super(props);
-        this.state = {platform :'NAME', trie: null}
+        this.state = {platform :'NAME', artistsTrie: null, songsTrie: null};
         this.changeContext = this.changeContext.bind(this);
         this.showLoading = this.showLoading.bind(this);
     }
 
     componentDidMount() {
-        const endpoint = `/api/getAllArtists`;
-        fetch(endpoint,{method:'GET'})
-            .then((response)=> {return response.text()})
-            .then((text)=>{
-                    let trie = new Trie();
-                    const info = JSON.parse(text);
-                    for (let record of info){
-                        trie.insert(record['key']);
-                    }
-                    this.setState({trie:trie});
+        const ArtistsEndpoint = `/api/getAllArtists`;
+        const SongsEndpoint = `/api/getAllSongs`;
+        Promise.all([
+            fetch(ArtistsEndpoint),
+            fetch(SongsEndpoint)
+        ])
+            .then(([res1, res2]) => Promise.all([res1.text(), res2.text()]))
+            .then(([dataArtists,dataSongs])=>{
+                this.setState({
+                    artistsTrie: this.constructTrie(dataArtists),
+                    songsTrie: this.constructTrie(dataSongs)
+                });
             });
     }
 
+    constructTrie(text){
+        let trie = new Trie();
+        const info = JSON.parse(text);
+        for (let record of info){
+            trie.insert(record['key']);
+        }
+        return trie;
+    }
     changeContext(platform){
         this.setState({platform: platform})
     }
@@ -50,10 +60,10 @@ class App extends Component {
     }
     getPlatForm(){
         if (this.state.platform === 'NAME'){
-            return <ArtistsPlatForm trie={this.state.trie}/>
+            return <ArtistsPlatForm trie={this.state.artistsTrie}/>
         }
         else if (this.state.platform === 'SONG'){
-            return <SongPlatForm/>
+            return <SongPlatForm trie={this.state.songsTrie}/>
         }
         else{
             return (
@@ -72,7 +82,7 @@ class App extends Component {
               <p className="App-title">BILLBOARD SEARCH ENGINE</p>
           </header>
          <TopBar changeContext = {this.changeContext}/>
-          {(this.state.trie === null) ? this.showLoading():this.getPlatForm()}
+          {(this.state.artistsTrie === null && this.state.songsTrie === null) ? this.showLoading():this.getPlatForm()}
           </div>
           <footer>
               <div className="author-info-container">
